@@ -66,5 +66,5 @@ app.listen(port, () => {
 
 // Using Routes
 app.use('/auth', auth)
-app.use('/',index)
+app.use('/', index)
 app.use('/stories', stories)
