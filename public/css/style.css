@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .chip {
+    margin-top: 15px;
+  }
+
+  #delete-form {
+    display: inline;
+  }
+  .username {
+    background: #f57f17;
+    padding: 4px 5px;
+  }

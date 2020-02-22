@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StoryBooks</title>
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <script src="https://kit.fontawesome.com/ec2f5d14f1.js" crossorigin="anonymous"></script>
@@ -11,15 +12,20 @@
 </head>
 <body>
     {{> _header}}
+    
+    {{#if user}}
+      {{> _add}}
+    {{/if}}
     <main>
         <div class="container">
             {{{body}}}
         </div>
     </main>
+    {{> _footer}}
 
 
 </body>
-
+<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -33,7 +39,12 @@
   // Or with jQuery
   $(document).ready(function(){
     $('.sidenav').sidenav();
+    $('select').formSelect();
   });
+
+  CKEDITOR.replace('body'), {
+    plugins: 'wysiwygarea,toolbar,basicstyles,link'
+  };
       
     </script>
 </html>

@@ -1,16 +1,15 @@
 <nav class="grey darken-3">
   <div class="container">
     <div class="nav-wrapper">
-      <a href="/stories" class="brand-logo center">StoryBooks</a>
+      <a href="/" class="brand-logo center">StoryBooks</a>
       <a href="#" data-target="mobile-demo" class="button-collapse show-on-large sidenav-trigger"><i
           class="fa fa-bars"></i></a>
       <!-- RIGHT NAV -->
       <ul class="right hide-on-med-and-down">
         {{#if user}}
-          <li><a href="/dashboard">Welcome {{user.firstName}}</a></li>
-          <li><a href="/auth/logout"><i class="material-icons">add</i> Logout</a></li>
-            {{else}}
-          <li><a href="/stories"><i class="material-icons">add</i> Public Stories</a></li>
+          <li><a href="/dashboard">Welcome &nbsp; <span class="username">{{user.firstname}}😃</span></a></li>
+          <li><a href="/stories">Public Stories</a></li>
+          <li><a href="/auth/logout">Logout</a></li>
         {{/if}}
       </ul>
     </div>
@@ -29,13 +28,13 @@
             <a href="#email"><span class="white-text email">{{user.email}}</span></a>
             </div></li>
             <li><a href="#!"><i class="material-icons">cloud</i>dashboard</a></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>My Stories</a></li>
+            <li><a href="/stories/my"><i class="material-icons">cloud</i>My Stories</a></li>
             <li><div class="divider"></div></li>
             <li><a href="auth/logout" class="red-text">LogOut</a></li>
         {{else}}
             <li><div class="user-view">
-                <a href="auth/google" class="btn red darken-1">Login with Google</a>
+                <a href="/auth/google" class="btn red darken-1">Login with Google</a>
             </div></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>Public Stories</a></li>
+            <li><a href="/stories"><i class="material-icons">cloud</i>Public Stories</a></li>
         {{/if}}
   </ul>
